@@ -10,8 +10,14 @@
     "@types/node": "^16.18.69",
     "@types/react": "^18.2.46",
     "@types/react-dom": "^18.2.18",
+    "axios": "^1.6.4",
+    "export-to-csv": "^1.2.2",
+    "html2canvas": "^1.4.1",
+    "jspdf": "^2.5.1",
     "react": "^18.2.0",
+    "react-d3-cloud": "^1.0.6",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.21.2",
     "react-scripts": "5.0.1",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
@@ -20,13 +26,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "eject": "react-scripts eject",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix",
+    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
   },
   "browserslist": {
     "production": [
@@ -39,5 +42,16 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@types/d3-scale": "^4.0.8",
+    "@types/d3-scale-chromatic": "^3.0.3",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-prettier": "^5.1.2",
+    "prettier": "^3.1.1",
+    "tailwindcss": "^3.4.0"
   }
 }
