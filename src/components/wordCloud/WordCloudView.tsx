@@ -114,7 +114,8 @@ export default function WordCloudView() {
   };
 
   const downloadWordCloudWordsCSV = () => {
-    const csvConfig = mkConfig({ useKeysAsHeaders: true });
+    if (!textFile) return;
+    const csvConfig = mkConfig({ useKeysAsHeaders: true, filename: `${textFile.name.replace('.txt', '')}-word_cloud_words` });
     const data = wordsItems.map((w) => {
       return { text: w.text, count: w.value };
     });
